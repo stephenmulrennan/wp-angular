@@ -1,0 +1,21 @@
+<ul id="menu-primary-menu" class="nav navbar-nav">
+  <li ng-repeat="menu in nav.items track by menu.ID" ng-class="{dropdown : menu.hasChildren()}">
+
+    <a ng-if="!menu.hasChildren()" href="{{menu.url}}">{{menu.title}}</a>
+    
+    <a onclick="return false;" ng-if="menu.hasChildren()" href="{{menu.url}}" class="dropdown-toggle" data-toggle="dropdown">{{menu.title}} <b class="caret"></b></a>
+
+    <ul class="dropdown-menu mega-menu" ng-show="menu.hasChildren()">
+      <div>
+        <ul class="mega-item" ng-repeat="subMenu in menu.children">
+          <li>
+            <a href="{{subMenu.url}}">{{subMenu.title}}</a>
+            <ul class="mega-item" ng-if="subMenu.hasChildren()">
+              <li ng-repeat="subItem in subMenu.children"><a href="{{subItem.url}}">{{subItem.title}}</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </ul>
+  </li>
+</ul>
