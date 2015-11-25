@@ -13,12 +13,16 @@
 
       // Default Homepage Route
       .when('/', {
-        templateUrl: window.themeUrl + '/templates/home.html',
+        templateUrl: function($routeParams) {
+          return window.themeUrl + '/php/template.php?template=home';
+        },
         controller: 'GetPage'
       })
       
       .when('/home', {
-        templateUrl: window.themeUrl + '/templates/home.html',
+        templateUrl: function($routeParams) {
+          return window.themeUrl + '/php/template.php?template=home';
+        },
         controller: 'GetPage'
       })
       

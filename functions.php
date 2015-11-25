@@ -1,5 +1,5 @@
 <?php 
-  if(false) {
+  if (false) {
     ini_set('display_errors', 'On');
     error_reporting(E_ALL);	
   }
@@ -53,10 +53,6 @@
     addAppScripts();
   }
 
-  add_action( 'wp_enqueue_scripts', 'addScripts');
-
-  add_action( 'after_setup_theme', 'register_my_menus' );
- 
   function register_my_menus() {
     register_nav_menus( array(
       'primary' => __( 'Primary Menu', 'WP Mega Menu 1.0' ),
@@ -64,4 +60,10 @@
       'footer' => __('Footer Navigation', 'Footer Navigation')
     ));
   }
+
+  require_once( 'php/options.php' );
+
+  add_action( 'wp_enqueue_scripts', 'addScripts');
+
+  add_action( 'after_setup_theme', 'register_my_menus' );
 ?>

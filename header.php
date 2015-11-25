@@ -101,5 +101,5 @@
     </div>
     <!-- Callback Modal Div -->
     <!-- Modal -->
-    <?php include('php/callback-form.php'); ?>
+    
       <div class="container">
