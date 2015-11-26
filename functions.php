@@ -61,8 +61,6 @@
     ));
   }
 
-  require_once( 'php/options.php' );
-
   add_action( 'wp_enqueue_scripts', 'addScripts');
 
   add_action( 'after_setup_theme', 'register_my_menus' );
