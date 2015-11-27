@@ -25,7 +25,7 @@
           <div class="col-md-6">
             <div id="logo">
               <a href="<?php echo site_url();?>" title="McIntyre O'Brien Solicitors">
-                <img class="img-responsive" src="<?php bloginfo('template_directory');?>/images/title.png" />
+                <img class="img-responsive" src="<?php bloginfo('template_directory');?>/images/title_new.png" />
               </a>
             </div>
           </div>
